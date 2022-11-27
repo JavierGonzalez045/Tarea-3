@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pollos IBC</title>
+    <link
+      rel="icon"
+      href="./img/icons/pollos-ibc-icon.png"
+      type="image/icon type"
+    />
+    <link rel="stylesheet" href="./css/carousel.css" />
+
+    <link rel="stylesheet" href="./css/preloader.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="preloader">
+      <div class="layers"><span></span> <span></span> <span></span></div>
+      <!-- end layers -->
+
+      <div class="container-fluid">
+        <!-- Loading de pollo -->
+        <lottie-player
+          class="loading-animation"
+          src="https://assets9.lottiefiles.com/packages/lf20_7dgd3m.json"
+          background="transparent"
+          speed="1.4"
+          style="height: 300px"
+          loop
+          autoplay
+        ></lottie-player>
+
+        <h2>Cargando...</h2>
+        <!-- En caso de querer visualizar el número del porcentaje, descomentar el código -->
+        <!-- <div class="percentage">
+          <div id="percentage"></div>
+        </div> -->
+        <!-- end percentage -->
+        <div class="loadbar"></div>
+        <!-- end loadbar -->
+      </div>
+      <!-- end container-fluid -->
+    </div>
+    <!-- end preloader -->
+    <div class="page-transition">
+      <div class="layers"><span></span> <span></span> <span></span></div>
+      <!-- end layers -->
+    </div>
+
+    <!--- CABECERA --->
+    <header class="topbar">
+      <a href="#" class="logo"><img src="img/icons/pollos-ibc-icon.jpg" /></a>
+      <div class="hamburger-menu">
+        <div class="svg circle" id="hamburger-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="70"
+            height="70"
+            viewBox="0 0 200 200"
+          >
+            <g stroke-width="6.5" stroke-linecap="round">
+              <path
+                d="M72 82.286h28.75"
+                fill="#009100"
+                fill-rule="evenodd"
+                stroke="#FD180B"
+              />
+              <path
+                d="M100.75 103.714l72.482-.143c.043 39.398-32.284 71.434-72.16 71.434-39.878 0-72.204-32.036-72.204-71.554"
+                fill="none"
+                stroke="#FD180B"
+              />
+              <path
+                d="M72 125.143h28.75"
+                fill="#009100"
+                fill-rule="evenodd"
+                stroke="#FD180B"
+              />
+              <path
+                d="M100.75 103.714l-71.908-.143c.026-39.638 32.352-71.674 72.23-71.674 39.876 0 72.203 32.036 72.203 71.554"
+                fill="none"
+                stroke="#FD180B"
+              />
+              <path
+                d="M100.75 82.286h28.75"
+                fill="#009100"
+                fill-rule="evenodd"
+                stroke="#FD180B"
+              />
+              <path
+                d="M100.75 125.143h28.75"
+                fill="#009100"
+                fill-rule="evenodd"
+                stroke="#FD180B"
+              />
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <ul class="navbar">
+        <li class="menu-navigate"><a href="#home" class="active"></a></li>
+        <li class="menu-navigate"><a href="#home">Inicio</a></li>
+        <li class="menu-navigate"><a href="#menu">Menú</a></li>
+        <li class="menu-navigate"><a href="#about">Sobre nosotros</a></li>
+        <li class="menu-navigate"><a href="#contact">Contacto</a></li>
+        <li class="menu-navigate">
+          <a href="https://wa.me/+18092999210" class="whatsapp-icon"
+            ><i class="bx bxl-whatsapp bx-tada"></i
+          ></a>
+        </li>
+      </ul>
+
+      <div class="top-btn">
+        <a href="https://wa.me/+18092999210">Ordenar Ahora</a>
+      </div>
+    </header>
+
+    <!-- end page-transition -->
+
+    <!--- INICIO--->
+    <section class="home" id="home">
+      <div class="home-text resize">
+        <h3 style="color: #fff; font-size: 50px; font-weight: bold">
+          BIENVENIDO!
+        </h3>
+        <h1>
+          Pollos <span style="color: #fd180b">IB</span
+          ><span style="color: #61b324">C</span>
+        </h1>
+        <p style="color: #fff; font-weight: 600">
+          Especialistas en llevar alegria y el mejor sabor a sus hogares.
+        </p>
+        <a href="#menu" class="btn">Conoce nuestro menú</a>
+      </div>
+
+      <!-- CARRUSEL -->
+
+      <div class="container">
+        <input type="radio" name="slider" id="item-1" checked />
+        <input type="radio" name="slider" id="item-2" />
+        <input type="radio" name="slider" id="item-3" />
+        <div class="cards">
+          <label class="card" for="item-1" id="song-1">
+            <img
+              src="img/foods/fried-chicken/crispy-fried-chicken.jpg"
+              alt="song"
+            />
+          </label>
+          <label class="card" for="item-2" id="song-2">
+            <img
+              src="img/foods/fried-chicken/crispy-fried-chicken.jpg"
+              alt="song"
+            />
+          </label>
+          <label class="card" for="item-3" id="song-3">
+            <img
+              src="img/foods/fried-chicken/crispy-fried-chicken.jpg"
+              alt="song"
+            />
+          </label>
+        </div>
+        <div class="player">
+          <div class="upper-part">
+            <div class="info-area" id="test">
+              <label class="song-info" id="song-info-1">
+                <div class="title">
+                  <a href="#menu" style="text-decoration: none; color: white"
+                    >Pollo BBQ</a
+                  >
+                </div>
+                <div class="sub-line">
+                  <div class="subtitle">
+                    Pollo con nuestra deliciosa salsa BBQ
+                  </div>
+                </div>
+              </label>
+              <label class="song-info" id="song-info-2">
+                <div class="title">Pollo (Tradicional)</div>
+                <div class="sub-line">
+                  <div class="subtitle">Nuestro pollo tradicional</div>
+                </div>
+              </label>
+              <label class="song-info" id="song-info-3">
+                <div class="title">Pollo (Crispy)</div>
+                <div class="sub-line">
+                  <div class="subtitle">Nuestro pollo crispy</div>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENÚ PECHURINA -->
+
+    <section class="menu" id="pechurina">
+      <div class="center-text">
+        <h2>Pechurina</h2>
+      </div>
+
+      <div class="box-content">
+        <div class="main">
+          <img src="img/foods/fried-chicken/crispy-fried-chicken.jpg" />
+          <div class="box-text">
+            <h4>Pechurina (Tradicional)</h4>
+            <p>Tiras de pollo al estilo tradicional Dominicano.</p>
+            <h6>RD$300</h6>
+          </div>
+        </div>
+
+        <div class="main">
+          <img src="img/foods/fried-chicken/crispy-fried-chicken.jpg" />
+          <div class="box-text">
+            <h4>Pechurina (BBQ)</h4>
+            <p>Tiras de pollo con nuestra rica salsa BBQ.</p>
+            <h6>RD$250</h6>
+          </div>
+        </div>
+
+        <div class="main">
+          <img src="img/foods/fried-chicken/crispy-fried-chicken.jpg" />
+          <div class="box-text">
+            <h4>Pechurina (Picante)</h4>
+            <p>Tiras de pollo con nuestra salsa búfalo.</p>
+            <h6>RD$300</h6>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENÚ ALITAS -->
+
+    <section class="menu" id="alitas">
+      <div class="center-text">
+        <h2>Alitas</h2>
+      </div>
+
+      <div class="box-content">
+        <div class="main">
+          <img src="img/foods/fried-chicken/crispy-fried-chicken.jpg" />
+          <div class="box-text">
+            <h4>Alitas (Tradicional)</h4>
+            <p>Alitas de pollo al estilo tradicional Dominicano.</p>
+            <h6>RD$300</h6>
+          </div>
+        </div>
+
+        <div class="main">
+          <img src="img/foods/fried-chicken/crispy-fried-chicken.jpg" />
+          <div class="box-text">
+            <h4>Alitas (BBQ)</h4>
+            <p>Alitas de pollo con nuestra rica salsa BBQ.</p>
+            <h6>RD$250</h6>
+          </div>
+        </div>
+
+        <div class="main">
+          <img src="img/foods/fried-chicken/crispy-fried-chicken.jpg" />
+          <div class="box-text">
+            <h4>Alitas (Picante)</h4>
+            <p>Alitas de pollo con nuestra salsa búfalo.</p>
+            <h6>RD$300</h6>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENÚ POLLI BLOCKS -->
+
+    <section class="menu" id="polli-blocks">
+      <div class="center-text">
+        <h2>Polli Blocks</h2>
+      </div>
+
+      <div class="box-content">
+        <div class="main">
+          <img src="img/foods/fried-chicken/crispy-fried-chicken.jpg" />
+          <div class="box-text">
+            <h4>Polli Blocks</h4>
+            <p>Jugosas bolitas de pollo crocantes.</p>
+            <h6>RD$300</h6>
+          </div>
+        </div>
+
+        <div class="main">
+          <img src="img/foods/fried-chicken/crispy-fried-chicken.jpg" />
+          <div class="box-text">
+            <h4>Polli Blocks</h4>
+            <p>Jugosas bolitas de pollo crocantes.</p>
+            <h6>RD$300</h6>
+          </div>
+        </div>
+
+        <div class="main">
+          <img src="img/foods/fried-chicken/crispy-fried-chicken.jpg" />
+          <div class="box-text">
+            <h4>Polli Blocks</h4>
+            <p>Jugosas bolitas de pollo crocantes.</p>
+            <h6>RD$300</h6>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENÚ SANDWICHES -->
+
+    <section class="menu" id="sandwiches">
+      <div class="center-text">
+        <h2>Sandwiches</h2>
+      </div>
+
+      <div class="box-content centralize-sandwich">
+        <div class="main">
+          <img src="img/foods/fried-chicken/crispy-fried-chicken.jpg" />
+          <div class="box-text">
+            <h4>Alitas (Tradicional)</h4>
+            <p>Alitas de pollo al estilo tradicional Dominicano.</p>
+            <h6>RD$300</h6>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENÚ PAL CORO -->
+
+    <section class="menu" id="pal-coro">
+      <div class="center-text">
+        <h2>Pal Coro</h2>
+      </div>
+
+      <div class="box-content">
+        <div class="main">
+          <img src="img/foods/fried-chicken/crispy-fried-chicken.jpg" />
+          <div class="box-text">
+            <h4>Alitas (Tradicional)</h4>
+            <p>Alitas de pollo al estilo tradicional Dominicano.</p>
+            <h6>RD$300</h6>
+          </div>
+        </div>
+
+        <div class="main">
+          <img src="img/foods/fried-chicken/crispy-fried-chicken.jpg" />
+          <div class="box-text">
+            <h4>Alitas (BBQ)</h4>
+            <p>Alitas de pollo con nuestra rica salsa BBQ.</p>
+            <h6>RD$250</h6>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENÚ ACOMPAÑAS -->
+
+    <section class="menu" id="acompañas">
+      <div class="center-text">
+        <h2>Acompañas</h2>
+      </div>
+
+      <div class="box-content">
+        <div class="main">
+          <img src="img/foods/fried-chicken/crispy-fried-chicken.jpg" />
+          <div class="box-text">
+            <h4>Alitas (Tradicional)</h4>
+            <p>Alitas de pollo al estilo tradicional Dominicano.</p>
+            <h6>RD$300</h6>
+          </div>
+        </div>
+
+        <div class="main">
+          <img src="img/foods/fried-chicken/crispy-fried-chicken.jpg" />
+          <div class="box-text">
+            <h4>Alitas (BBQ)</h4>
+            <p>Alitas de pollo con nuestra rica salsa BBQ.</p>
+            <h6>RD$250</h6>
+          </div>
+        </div>
+
+        <div class="main">
+          <img src="img/foods/fried-chicken/crispy-fried-chicken.jpg" />
+          <div class="box-text">
+            <h4>Alitas (Picante)</h4>
+            <p>Alitas de pollo con nuestra salsa búfalo.</p>
+            <h6>RD$300</h6>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENÚ BEBIDAS -->
+
+    <section class="menu" id="bebidas">
+      <div class="center-text">
+        <h2>Bebidas</h2>
+      </div>
+
+      <div class="box-content">
+        <div class="main">
+          <img src="img/foods/fried-chicken/crispy-fried-chicken.jpg" />
+          <div class="box-text">
+            <h4>Alitas (Tradicional)</h4>
+            <p>Alitas de pollo al estilo tradicional Dominicano.</p>
+            <h6>RD$300</h6>
+          </div>
+        </div>
+
+        <div class="main">
+          <img src="img/foods/fried-chicken/crispy-fried-chicken.jpg" />
+          <div class="box-text">
+            <h4>Alitas (BBQ)</h4>
+            <p>Alitas de pollo con nuestra rica salsa BBQ.</p>
+            <h6>RD$250</h6>
+          </div>
+        </div>
+
+        <div class="main">
+          <img src="img/foods/fried-chicken/crispy-fried-chicken.jpg" />
+          <div class="box-text">
+            <h4>Alitas (Picante)</h4>
+            <p>Alitas de pollo con nuestra salsa búfalo.</p>
+            <h6>RD$300</h6>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--- CONTACTO --->
+    <section class="contact" id="contact">
+      <div class="contact-box">
+        <h3>Redes Sociales</h3>
+        <h5>Siguenos en nuestras redes sociales.</h5>
+        <div class="social">
+          <a href="https://www.instagram.com/pollosibc/" target="_blank"
+            ><i class="bx bxl-instagram-alt"></i
+          ></a>
+        </div>
+      </div>
+
+      <div class="contact-box">
+        <h3>Nuestras comidas</h3>
+        <li><a href="#menu">Piezas de pollo</a></li>
+        <li><a href="#pechurina">Pechurinas</a></li>
+        <li><a href="#alitas">Alitas</a></li>
+        <li><a href="#polli-blocks">Polli Blocks</a></li>
+        <li><a href="#sandwiches">Sandwiches</a></li>
+        <li><a href="#pal-coro">Pal Coro</a></li>
+        <li><a href="#acompañas">Acompañas</a></li>
+        <li><a href="#bebidas">Bebidas</a></li>
+      </div>
+
+      <div class="contact-box address">
+        <h3>Contactos</h3>
+        <i class="bx bxs-map"><span>Calle primera</span></i>
+        <i class="bx bxs-envelope"><span>hello@yourmail.com</span></i>
+        <i class="bx bxs-phone"><span>(00) 123 456 789</span></i>
+      </div>
+
+      <div class="contact-box branch-office">
+        <h3>Sucursales</h3>
+        <i class="bx bxs-map"
+          ><a href="https://goo.gl/maps/k1MRoEihCxYLabur9" target="_blank"
+            ><span>Piantini</span></a
+          ></i
+        >
+        <i class="bx bxs-map"
+          ><a href="https://goo.gl/maps/k1MRoEihCxYLabur9" target="_blank"
+            ><span>Naco</span></a
+          ></i
+        >
+        <i class="bx bxs-map"
+          ><a href="https://goo.gl/maps/k1MRoEihCxYLabur9" target="_blank"
+            ><span>Bella Vista</span></a
+          ></i
+        >
+        <i class="bx bxs-map"
+          ><a href="https://goo.gl/maps/k1MRoEihCxYLabur9" target="_blank"
+            ><span>Arroyo Hondo</span></a
+          ></i
+        >
+        <i class="bx bxs-map"
+          ><a href="https://goo.gl/maps/k1MRoEihCxYLabur9" target="_blank"
+            ><span>Los Ríos</span></a
+          ></i
+        >
+      </div>
+    </section>
+
+    <div class="end-text">
+      <p>Pollos IBC &copy; Copyright 2022</p>
+    </div>
+
+    <!--- LINKS DE JAVASCRIPT --->
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/carousel.js"></script>
+    <script src="./js/preloader.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  </body>
+</html>
