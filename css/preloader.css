@@ -1,0 +1,497 @@
+@import url("https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:800&display=swap");
+
+/* CUSTOM CURSOR */
+.custom-cursor {
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 350ms ease;
+  transform: translate(-50%, -50%) scale(0.3);
+  z-index: 999;
+}
+
+.custom-cursor--link {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* MENU NAVIGATION */
+.menu-navigation {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 8;
+  visibility: hidden;
+}
+.menu-navigation * {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  transition-duration: 500ms;
+  -webkit-transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+}
+.menu-navigation .layers {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: -100%;
+  top: 0;
+  background: #7ee6f8;
+}
+.menu-navigation .layers span {
+  width: 100%;
+  left: -100%;
+  background: #090c16;
+}
+.menu-navigation .layers span:nth-child(1) {
+  height: 33.3333%;
+  position: absolute;
+  top: 0;
+  transition-delay: 0.25s;
+}
+.menu-navigation .layers span:nth-child(2) {
+  height: 33.3333%;
+  position: absolute;
+  top: 33.33333%;
+  transition-delay: 0.5s;
+}
+.menu-navigation .layers span:nth-child(3) {
+  height: 33.3333%;
+  position: absolute;
+  top: 66.66666%;
+  transition-delay: 0.75s;
+}
+.menu-navigation.active {
+  visibility: visible;
+}
+.menu-navigation.active .layers {
+  left: 0;
+}
+.menu-navigation.active .layers span {
+  left: 0;
+}
+
+/* MENU CONTAINER */
+.menu-container {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(0);
+  z-index: 8;
+  overflow: hidden;
+  white-space: nowrap;
+  visibility: hidden;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  opacity: 0;
+  transition-delay: 1s;
+}
+.menu-container .main-menu {
+  display: inline-block;
+  margin: 0;
+  padding: 0 15%;
+}
+.menu-container .main-menu li {
+  display: inline-block;
+  line-height: 1;
+  margin: 0 3vw;
+  padding: 0;
+  list-style: none;
+}
+.menu-container .main-menu li a {
+  font-weight: 800;
+  color: #fff;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  font-size: 8vw;
+}
+.menu-container .main-menu li a:hover {
+  text-decoration: none;
+}
+.menu-container .main-menu li a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  width: 0;
+  transition: width 0s ease, background 0.25s ease;
+}
+.menu-container .main-menu li a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 5px;
+  width: 0;
+  background: #7ee6f8;
+  transition: width 0.25s ease;
+}
+.menu-container .main-menu li a:hover:before {
+  width: 100%;
+  background: #7ee6f8;
+  transition: width 0.25s ease;
+}
+.menu-container .main-menu li a:hover:after {
+  width: 100%;
+  background: transparent;
+  transition: all 0s ease;
+}
+.menu-container.active {
+  visibility: visible;
+  transform: translateY(-50%);
+  opacity: 1;
+}
+
+/* PRELOADER */
+.preloader {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  transition-duration: 500ms;
+  -webkit-transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+  transition-delay: 2s;
+}
+.preloader * {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  transition-duration: 500ms;
+  -webkit-transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+}
+.preloader .layers {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #fd180b;
+  transition-delay: 1.75s;
+}
+.preloader .layers span {
+  width: 100%;
+  height: 33.4%;
+  position: absolute;
+  left: 0;
+  /*background: #d4d4d4; Esto cambia el color del fondo del preloader*/
+  background: white;
+}
+.preloader .layers span:nth-child(1) {
+  top: 0;
+  transition-delay: 1s;
+}
+.preloader .layers span:nth-child(2) {
+  top: 33.33333%;
+  transition-delay: 1.25s;
+}
+.preloader .layers span:nth-child(3) {
+  top: 66.66666%;
+  transition-delay: 1.5s;
+}
+.preloader .container-fluid {
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+
+.preloader .container-fluid h2 {
+  font-size: 3rem;
+  display: inline-block;
+  letter-spacing: 1px;
+  transition-delay: 0.6s;
+  color: #61b324; /*Esto no estaba*/
+}
+
+.preloader .container-fluid .loading-animation {
+  display: inline-block;
+  letter-spacing: 1px;
+  transition-delay: 0.6s;
+}
+
+.preloader .container-fluid h2 .char {
+  display: inline-block;
+  animation: texteffect 0.6s cubic-bezier(0.5, 0, 0.5, 1) both;
+  animation-delay: calc(10ms * var(--char-index));
+}
+
+.preloader .container-fluid figure {
+  margin-bottom: 5px;
+  transition-delay: 0.5s;
+}
+.preloader .container-fluid figure img {
+  /* height: 30px; Asi estaba antes*/
+  height: 100%;
+  animation: texteffect 0.6s cubic-bezier(0.5, 0, 0.5, 1) both;
+}
+
+/*-webkit-text-stroke-width: 10px; Esto le cambia el grosor al número que incrementa en el fondo del preloader*/
+/*-webkit-text-stroke-color: red; Esto le cambia el color al número que incrementa en el fondo del preloader*/
+/*Descomentarlo en caso de querer visualizar el progreso del porcentaje*/
+/* .preloader .container-fluid .percentage {
+  width: 100%;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 10px;
+  -webkit-text-stroke-color: #fff;
+  -webkit-text-stroke-color: red;
+  color: transparent;
+  line-height: 1;
+  font-size: 40vw;
+  font-weight: 800;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: 0;
+  transform: translateY(-50%);
+  opacity: 0.5;
+  transition-delay: 0.8s;
+} */
+/* .preloader .container-fluid .percentage #percentage {
+  animation: texteffect 0.6s cubic-bezier(0.5, 0, 0.5, 1) both;
+  animation-delay: 0.3s;
+} */
+
+/* PAGE TRANSITION */
+.page-transition {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  visibility: hidden;
+}
+.page-transition * {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  transition-duration: 500ms;
+  -webkit-transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+}
+.page-transition .layers {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: -100%;
+  top: 0;
+  background: #75d52b;
+}
+.page-transition .layers span {
+  width: 100%;
+  left: -100%;
+  /* background: #090c16; */
+  background: #d4d4d4;
+}
+.page-transition .layers span:nth-child(1) {
+  height: 33.3333%;
+  position: absolute;
+  top: 0;
+  transition-delay: 0.25s;
+}
+.page-transition .layers span:nth-child(2) {
+  height: 33.3333%;
+  position: absolute;
+  top: 33.33333%;
+  transition-delay: 0.5s;
+}
+.page-transition .layers span:nth-child(3) {
+  height: 33.3333%;
+  position: absolute;
+  top: 66.66666%;
+  transition-delay: 0.75s;
+}
+.page-transition.active {
+  visibility: visible;
+}
+.page-transition.active .layers {
+  left: 0;
+}
+.page-transition.active .layers span {
+  left: 0;
+}
+
+/* PAGE LOADED */
+.page-loaded {
+  overflow: inherit;
+}
+.page-loaded .preloader {
+  left: -100%;
+}
+.page-loaded .preloader .container-fluid figure {
+  transform: translateY(-20px);
+  opacity: 0;
+}
+.page-loaded .preloader .container-fluid h2 {
+  transform: translateY(-10px);
+  opacity: 0;
+}
+
+/*Esto hace que desaparezca el svg del loading en conjunto con la palabra cargando*/
+.page-loaded .preloader .container-fluid .loading-animation {
+  transform: translateY(-10px);
+  opacity: 0;
+}
+
+/*Esto es para que el porcentaje desaparezca antes de los layers*/
+/* .page-loaded .preloader .container-fluid .percentage {
+  opacity: 0;
+  transform: translateY(-60%);
+} */
+.page-loaded .preloader .layers {
+  left: -100%;
+}
+.page-loaded .preloader .layers span {
+  left: -100%;
+}
+.page-loaded .topbar {
+  top: 0;
+}
+.page-loaded .bottombar {
+  bottom: 0;
+}
+.page-loaded.header-ready .showcase-slider .swiper-wrapper {
+  transform: translateX(0);
+}
+.page-loaded.header-ready
+  .showcase-slider
+  .swiper-slide.swiper-slide-active
+  .slide-image {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition-delay: 0.8s;
+}
+.page-loaded.header-ready .page-header .video-bg {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 0.4s;
+}
+.page-loaded.header-ready .page-header h1 {
+  text-indent: inherit;
+}
+.page-loaded.header-ready .page-header h1 .char {
+  opacity: 1;
+  transform: translateY(0);
+}
+.page-loaded.header-ready .page-header p {
+  text-indent: inherit;
+  opacity: 0.6;
+  transform: translateY(0);
+}
+.page-loaded
+  .showcase-slider
+  .swiper-slide.swiper-slide-active
+  .slide-inner
+  h2
+  .char {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-loaded
+  .showcase-slider
+  .swiper-slide.swiper-slide-active
+  .slide-inner
+  h2:after {
+  width: 120px;
+}
+
+.page-loaded
+  .showcase-slider
+  .swiper-slide.swiper-slide-active
+  .slide-inner
+  h1
+  .char {
+  opacity: 1;
+  transform: translateY(0);
+}
+.page-loaded
+  .showcase-slider
+  .swiper-slide.swiper-slide-active
+  .slide-inner
+  .link {
+  opacity: 1;
+  transform: translateY(0);
+}
+.page-loaded .showcase-slider .swiper-controls {
+  left: 25px;
+}
+.page-loaded .showcase-slider .swiper-pagination {
+  right: 25px;
+}
+
+body.compensate-for-scrollbar {
+  overflow: hidden;
+}
+
+/* .topbar {
+  width: 100%;
+  line-height: 46px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 20px 60px;
+  position: absolute;
+  left: 0;
+  top: -100%;
+  z-index: 9;
+  font-weight: 600;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  transition-duration: 500ms;
+  -webkit-transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+  transition-delay: 2.1s;
+} */
+
+/* .topbar .hamburger-menu {
+  margin-right: 0;
+  margin: -12px 0;
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  right: 170px;
+  position: absolute;
+  top: 18px;
+}
+
+.topbar .hamburger-menu .svg {
+  margin-right: -10px;
+} */
